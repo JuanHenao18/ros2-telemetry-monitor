@@ -265,3 +265,8 @@ qtcreator-*
 
 # Catkin custom files
 CATKIN_IGNORE
+
+# ROS 2 / colcon
+build/
+install/
+log/
