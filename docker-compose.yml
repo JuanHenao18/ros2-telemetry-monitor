@@ -1,0 +1,14 @@
+version: "3.9"
+
+services:
+  telemetry:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    volumes:
+      - ./data:/data
+    command: >
+      bash -c "
+      ros2 run telemetry_pkg telemetry_publisher &
+      ros2 run telemetry_pkg telemetry_monitor
+      "
